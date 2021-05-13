@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/itemId"
+        android:layout_width="72dp"
+        android:layout_height="75dp"
+        android:fontFamily="@font/philosopher"
+        android:gravity="center"
+        android:text="id"
+        android:textColor="@color/darkCoffee"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/philosopher"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="title"
+        android:textColor="@color/darkCoffee"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/itemId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemAuthor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/philosopher"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="author"
+        android:textColor="@color/darkCoffee"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemId"
+        app:layout_constraintEnd_toEndOf="@+id/itemTitle"
+        app:layout_constraintStart_toEndOf="@+id/itemId"
+        app:layout_constraintTop_toBottomOf="@+id/itemTitle" />
+
+    <TextView
+        android:id="@+id/itemDuration"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/philosopher"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="duration"
+        android:textColor="@color/darkCoffee"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemAuthor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/itemAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/itemYear" />
+
+    <TextView
+        android:id="@+id/itemYear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/philosopher"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="year"
+        android:textColor="@color/darkCoffee"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toEndOf="@+id/itemTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
