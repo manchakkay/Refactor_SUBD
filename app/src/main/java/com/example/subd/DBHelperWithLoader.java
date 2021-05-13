@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -14,7 +13,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class DBHelperWithLoader extends SQLiteOpenHelper {
-    private static String DB_NAME = "playlist.db"; // задать название БД
+    private static final String DB_NAME = "playlist.db"; // задать название БД
     // (должно совпадать с именем файла в /assets
     private static String DB_PATH = "";
     private static final int DB_VERSION = 20;
@@ -27,10 +26,7 @@ public class DBHelperWithLoader extends SQLiteOpenHelper {
 
     public DBHelperWithLoader(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
-        if (android.os.Build.VERSION.SDK_INT >= 17)
-            DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
-        else
-            DB_PATH = "/data/data/" + context.getPackageName() + "/databases/";
+        DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
         this.mContext = context;
 
         copyDataBase();

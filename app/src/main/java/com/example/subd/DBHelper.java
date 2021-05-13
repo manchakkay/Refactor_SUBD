@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+@SuppressWarnings("unused")
 public class DBHelper extends SQLiteOpenHelper {
     final static String DB_NAME = "music.db";
     final static String TABLE_NAME = "playlist";
